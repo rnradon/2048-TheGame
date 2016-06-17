@@ -188,18 +188,6 @@ var Game = (function() {
             }
         }
 
-        function is2048(){
-          for(var i = 0; i < 4; i++){
-            for(var j = 0; j < 4; j++){
-              if(mat[i][j] === 2048){
-              show2048dialog = 1;
-              return true;
-              }
-            }
-          }
-          return false;
-        }
-
         for(var k = 0; k < linearMat.length; k++){
              console.log("ELE");
              console.log(k);
@@ -344,6 +332,19 @@ var Game = (function() {
         return flag;
     }
 
+    function is2048(){
+      for(var i = 0; i < 4; i++){
+        for(var j = 0; j < 4; j++){
+          if(mat[i][j] === 2048){
+          show2048dialog = 1;
+          console.log("IN IF")
+          return true;
+          }
+        }
+      }
+      return false;
+    }
+
     // show Dialog for GameOver()
     function showGameOverDialog() {
         document.getElementById("GameOver").style.display = "block";
@@ -357,7 +358,7 @@ var Game = (function() {
     function move(e) {
         //depending upon keypress you call the respective function
        e.preventDefault();
-       if(e.keyCode === 37 || e.keyCode === 38 || e.keyCode === 39 || e.keyCode === 40){
+       if((e.keyCode === 37 || e.keyCode === 38 || e.keyCode === 39 || e.keyCode === 40) && !is2048()){
          e.preventDefault();
             if (e.keyCode === 37) {
                 // moveLeft();
@@ -393,8 +394,8 @@ var Game = (function() {
                 showGameOverDialog();
             }
             if (is2048()) {
+                console.log("2048 Bann gaya :D")
                 show2048Dialog();
-                show2048dialog = 0;
             }
         }
     }
