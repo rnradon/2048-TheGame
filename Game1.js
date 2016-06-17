@@ -4,64 +4,7 @@ var Game = (function() {
     var show2048dialog = 0;
     var initialization = 0;
     var pass = 0;
-    // function to change state of mat;
-    // and set show2048dialog variable if required
 
-
-    // function left(){
-    //     var merge = -1;
-    //     for(var k = 0; k < 4; k++){
-    //         for(var i = 0; i < 4; i++){
-    //             for(var j = 0; j < 3; j++){
-    //                  if(mat[i][j] == 0 || mat[i][j+1] == 0 || mat[i][j] == mat[i][j+1]){
-    //                     if(merge != j){
-    //                         mat[i][j] = mat[i][j] + mat[i][j+1];
-    //                         mat[i][j+1] = 0;
-    //                         }
-    //                 }
-    //                 else{
-    //                     merge = j;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
-
-    // function left(){
-    //     for(var i = 0; i< 4; i++){
-    //         for(var j = 0; j < 4; j++){
-    //             for(var k = j+1; k < 4; k++){
-    //                 if(mat[i][j] != 0){
-    //                     if(mat[i][j] === mat[i][k] && k-j === 1){
-    //                         mat[i][j]*=2;
-    //                         mat[i][k] = 0;
-    //                         score+=mat[i][j];
-    //                         break;
-    //                     }
-
-    //                     // else if(mat[i][k] != 0 && mat[i][k] != mat[i][j]){
-    //                     //     j++;
-    //                     //     break;
-    //                     // }
-    //                 }
-    //                 else {
-    //                     if(j === 0 && mat[i][k] === mat[i][k+1] && mat[i][k] != 0){
-    //                         mat[i][j] = 2*mat[i][k];
-    //                         mat[i][k] = 0;
-    //                         mat[i][k+1] =0;
-    //                         score+=mat[i][j];
-    //                         break;
-    //                     }
-    //                     else if(mat[i][k] != 0){
-    //                         mat[i][j] = mat[i][k];
-    //                         mat[i][k] = 0;
-    //                         break;
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
     function rotate90()
     {
         var rotated = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
@@ -99,37 +42,6 @@ var Game = (function() {
       }
       redraw();
     }
-
-    // function right(){
-    //     for(var i = 0; i< 4; i++){
-    //         for(var j = 3; j >= 0; j--){
-    //             for(var k = j-1; k >= 0; k--){
-    //                 if(mat[i][j] != 0){
-    //                     if(mat[i][j] == mat[i][k]){
-    //                         mat[i][j]*=2;
-    //                         mat[i][k] = 0;
-    //                         score+=mat[i][j];
-    //                         break;
-    //                     }
-    //                 }
-    //                 else if(mat[i][j] == 0){
-    //                     if(j === 3 && mat[i][k] === mat[i][k-1] && mat[i][k] != 0){
-    //                         mat[i][j] = 2*mat[i][k];
-    //                         mat[i][k] = 0;
-    //                         mat[i][k-1] = 0;
-    //                         score+=mat[i][j];
-    //                         break;
-    //                     }
-    //                     if(mat[i][k] != 0){
-    //                         mat[i][j] = mat[i][k];
-    //                         mat[i][k] = 0;
-    //                         break;
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
 
     function right(){
        for (var i = 0; i < 4; i++) {
@@ -361,27 +273,15 @@ var Game = (function() {
        if((e.keyCode === 37 || e.keyCode === 38 || e.keyCode === 39 || e.keyCode === 40) && !is2048()){
          e.preventDefault();
             if (e.keyCode === 37) {
-                // moveLeft();
-                // sumLeft();
-                // moveLeft();
                 pass = 0;
                 left();
             } else if (e.keyCode === 38) {
-                // moveUp();
-                // sumTop();
-                // moveUp();
                 pass = 0;
                 up();
             } else if (e.keyCode === 39) {
-                // moveRight();
-                // sumRight();
-                // moveRight();
                 pass = 0;
                 right();
             } else if (e.keyCode === 40) {
-                // moveDown();
-                // sumDown();
-                // moveDown();
                 pass = 0;
                 down();
             }
@@ -405,54 +305,40 @@ var Game = (function() {
       e.preventDefault();
       console.log("IN MOUSE CLICK");
       $(".arrowKeys").click(function(){
-         id = $(this).attr("id");
-
-        id = parseInt(id);
-        console.log("CHAL JA BHAI");
-          console.log(id);
-        if(!is2048()){
-          e.preventDefault();
-             if (id === 37) {
-                 // moveLeft();
-                 // sumLeft();
-                 // moveLeft();
-                 pass = 0;
-                 left();
-             } else if (id === 38) {
-                 // moveUp();
-                 // sumTop();
-                 // moveUp();
-                 pass = 0;
-                 up();
-             } else if (id === 39) {
-                 // moveRight();
-                 // sumRight();
-                 // moveRight();
-                 pass = 0;
-                 right();
-             } else if (id === 40) {
-                 // moveDown();
-                 // sumDown();
-                 // moveDown();
-                 pass = 0;
-                 down();
-             }
-             document.getElementById("score").innerHTML = score;
-             if(pass === 1)
-             fillOneRandomEmptyCell();
-             // redrawremove();
-             redraw();
-             if (isGameOver()) {
-                 showGameOverDialog();
-             }
-             if (is2048()) {
-                 console.log("2048 Bann gaya :D")
-                 show2048Dialog();
-             }
-         }
+        var id = $(this).attr("id");
+        console.log(id);
     });
-
-
+    id = parseInt(id);
+    console.log("THE ID IS ");
+    console.log(id);
+      if(!is2048()){
+        e.preventDefault();
+           if (id === 37) {
+               pass = 0;
+               left();
+           } else if (id === 38) {
+               pass = 0;
+               up();
+           } else if (id === 39) {
+               pass = 0;
+               right();
+           } else if (id === 40) {
+               pass = 0;
+               down();
+           }
+           document.getElementById("score").innerHTML = score;
+           if(pass === 1)
+           fillOneRandomEmptyCell();
+           // redrawremove();
+           redraw();
+           if (isGameOver()) {
+               showGameOverDialog();
+           }
+           if (is2048()) {
+               console.log("2048 Bann gaya :D")
+               show2048Dialog();
+           }
+       }
     }
 
     function reset(e) {
