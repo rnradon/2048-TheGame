@@ -404,33 +404,34 @@ var Game = (function() {
       var id;
       e.preventDefault();
       console.log("IN MOUSE CLICK");
-      $(".arrowKeys").click(function(){
-         id = $(this).attr("id");
 
-        id = parseInt(id);
+         id = $(this).attr("id");
         console.log("CHAL JA BHAI");
           console.log(id);
         if(!is2048()){
           e.preventDefault();
-             if (id === 37) {
+             if (id.localeCompare("left") === 0) {
                  // moveLeft();
                  // sumLeft();
                  // moveLeft();
+                 console.log("IN LEFT");
                  pass = 0;
                  left();
-             } else if (id === 38) {
+             } else if (id.localeCompare("up") === 0) {
                  // moveUp();
                  // sumTop();
                  // moveUp();
+                 console.log("IN UPPPP");
                  pass = 0;
                  up();
-             } else if (id === 39) {
+             } else if (id.localeCompare("right") === 0) {
                  // moveRight();
                  // sumRight();
                  // moveRight();
+                 console.log("IN RIGHT");
                  pass = 0;
                  right();
-             } else if (id === 40) {
+             } else if (id.localeCompare("down") === 0) {
                  // moveDown();
                  // sumDown();
                  // moveDown();
@@ -450,7 +451,6 @@ var Game = (function() {
                  show2048Dialog();
              }
          }
-    });
 
 
     }
@@ -488,13 +488,15 @@ var Game = (function() {
         if(res === 1)
         reset();
     	else{
-        window.addEventListener('keydown', moveKeyBoard);
-        window.addEventListener('click', moveClick);
+        // window.addEventListener('keydown', moveKeyBoard);
+        // window.addEventListener('click', moveClick);
       }
         console.log("NEW KEY PRESS");
         // add reset method on click actions of all the reset elements
         window.addEventListener('keydown', moveKeyBoard);
-        window.addEventListener('click', moveClick);
+        // window.addEventListener('click', moveClick);
+        $(".arrowKeysLR").click(moveClick);
+        $(".arrowKeysUD").click(moveClick);
         var resetIcon = document.getElementById("reset");
         resetIcon.addEventListener("click", reset);
 

@@ -222,26 +222,26 @@
   font-size: 50px;
 
 }*/
-.keys{
-  padding-top: 300px;
-  padding-right: 100px;
-  font-size: 50px;
+.keys {
+    padding-top: 300px;
+    padding-right: 100px;
+    font-size: 50px;
 }
-.arrowLR{
 
-  display: flex;
-  padding-top: 20px;
-  position: fixed;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  font-size: 50px;
+.arrowLR {
+    display: flex;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 50px;
 }
-.arrowUD{
-  padding-left: 50px;
-  padding-top: 10px;
+.arrowUD {
+    padding-left: 50px;
+    padding-top: 0px;
+    margin-top: -125px;
 }
 #down{
-  padding-top: 30px;
+  padding-top: 100px;
   padding-right: 20px;
 }
 #left{
@@ -252,7 +252,9 @@
   padding-left: 50px;
   padding-top: 30px;
 }
-        </style>
+
+
+    </style>
         <script type="text/javascript" src = "Game.js"></script>
     </head>
     <body>
@@ -316,18 +318,20 @@
 
           <div class = "keys">
             <div class = "arrowLR">
-            <div class = "arrowKeys" id = "left">
+            <div class = "arrowKeysLR" id = "left">
               <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
             </div>
-            <div class = "arrowKeys" id = "right">
+            <div class = "arrowKeysLR" id = "right">
               <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
             </div>
           </div>
+
           <div class = "arrowUD">
-            <div class = "arrowKeys" id = "up">
+            <div class = "arrowKeysUD" id = "up">
               <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
             </div>
-            <div class = "arrowKeys" id = "down">
+            <div id = "space"></div>
+            <div class = "arrowKeysUD" id = "down">
             <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
           </div>
         </div>
