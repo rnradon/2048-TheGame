@@ -1,0 +1,361 @@
+/*----------------ARENA CSS-------------------*/
+.arena{
+	text-align: center;
+	background: #bbada0;
+	z-index: 1;
+	border-radius: 6px;
+	padding: 0 0%;
+	padding-bottom: 1.5%;
+    width: 65%;
+    margin: 10%;
+}
+
+.rows{
+	padding-top: 2%;
+	margin-left: 2%;
+    margin-right: 0%;
+	position: relative;
+}
+
+.tile{
+	width:23%;
+	height:11%;
+	background: rgba(238, 228, 218, 0.35);
+	border-radius: 3px;
+	padding-right: 2%: 
+	margin-right:5px;
+	z-index: 1;
+	margin-right: 2%;
+}
+/*--------------------------------------------*/
+
+
+/*-------------TILES COLOUR AND VALUES-------------*/
+
+.tile_2::before {
+	content: "2";
+
+}
+.tile_2 {
+    color: #776e65;
+    background: #eee4da;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+    font-weight: bold;
+    z-index: 10;
+    line-height: 113%;
+    font-size: 10vh;
+	transition-property: transform;
+	transition: 100ms ease-in-out;    
+
+}
+
+
+.tile_4::before {
+    content: "4";
+}
+.tile_4{
+	color: #776e65;
+    background: #ede0c8;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+    font-weight: bold;
+    z-index: 10;
+    line-height: 113%;
+    font-size: 10vh;
+	transition-property: transform;
+	transition: 100ms ease-in-out; 
+}
+
+
+.tile_8::before {
+    content: "8";
+}
+.tile_8{
+	color: #f9f6f2;
+    background: #f2b179;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+    font-weight: bold;
+    z-index: 10;
+    line-height: 113%;
+    font-size: 10vh;
+    transition-property: transform;
+	transition: 100ms ease-in-out; 
+}
+
+
+.tile_16::before {
+    content: "16";
+}
+.tile_16{
+	color: #f9f6f2;
+    background: #f59563;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+    font-weight: bold;
+    z-index: 10;
+    padding-left: 3%;
+    font-size: 8vh;
+    transition-property: transform;
+	transition: 100ms ease-in-out; 
+}
+
+
+.tile_32::before {
+    content: "32";
+}
+.tile_32{
+	color: #f9f6f2;
+    background: #f67c5f;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+    font-weight: bold;
+    z-index: 10;
+    padding-left: 3%;
+    font-size: 8vh;
+    transition-property: transform;
+	transition: 100ms ease-in-out; 
+}
+
+
+.tile_64::before {
+    content: "64";
+}
+.tile_64{
+	color: #f9f6f2;
+    background: #f67c5f;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+    font-weight: bold;
+    z-index: 10;
+    padding-left: 3%;
+    font-size: 8vh;
+    transition-property: transform;
+	transition: 100ms ease-in-out; 
+}
+
+
+.tile_128::before {
+    content: "128";
+}
+.tile_128{
+	color: #f9f6f2;
+    background: #edcf72;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
+    font-weight: bold;
+    z-index: 10;
+    padding-left: 1.5%;
+    line-height: 180%;
+    font-size: 6.3vh;
+    transition-property: transform;
+	transition: 100ms ease-in-out; 
+}
+
+
+.tile_256::before {
+    content: "256";
+}
+.tile_256{
+	color: #f9f6f2;
+    background: #edcc61;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
+    font-weight: bold;
+    z-index: 10;
+    padding-left: 1.5%;
+    line-height: 180%;
+    font-size: 6.3vh;
+    transition-property: transform;
+	transition: 100ms ease-in-out; ;
+}
+
+
+.tile_512::before {
+    content: "512";
+}
+.tile_512{
+	color: #f9f6f2;
+    background: #edc850;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
+    font-weight: bold;
+    z-index: 10;
+    padding-left: 1.5%;
+    line-height: 180%;
+    font-size: 6.3vh;
+    transition-property: transform;
+	transition: 100ms ease-in-out; 
+}
+
+
+.tile_1024::before {
+    content: "1024";
+}
+.tile_1024{
+	color: #f9f6f2;
+    background: #edc53f;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+    font-weight: bold;
+    z-index: 10;
+    padding-left: 1.5%;
+    line-height: 240%;
+    font-size: 4.7vh;
+    transition-property: transform;
+	transition: 100ms ease-in-out; 
+}
+
+
+.tile_2048::before {
+    content: "2048";
+}
+.tile_2048{
+	color: #f9f6f2;
+    background: #edc22e;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+    font-weight: bold;
+    z-index: 10;
+    padding-left: 1.5%;
+    line-height: 240%;
+    font-size: 4.7vh;
+    transition-property: transform;
+	transition: 100ms ease-in-out; 
+}
+
+
+
+#score{
+    position: relative;
+    display: inline-block;
+    background: #bbada0;
+    padding: 15px 25px;
+    font-size: 25px;
+    height: 60px;
+    line-height: 47px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+    margin-top: 8px;
+    text-align: center;
+    z-index: 100;
+    width: 125px;
+}
+#score::after{
+	content: "Score";
+	position: absolute;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: center;
+    color: #eee4da;
+}
+
+#high_score{
+    position: relative;
+    display: inline-block;
+    background: #bbada0;
+    padding: 15px 25px;
+    font-size: 25px;
+    height: 60px;
+    line-height: 47px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+    margin-top: 8px;
+    text-align: center;
+    z-index: 100;
+    width: 125px;
+}
+#high_score::after{
+	content: "High Score";
+	position: absolute;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: center;
+    color: #eee4da;
+}
+
+#GameOver{
+    /*margin-top: -50px;
+    margin-left: -50px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    background-color: red;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    z-index: 1001;
+    background: rgba(0,0,0,0.8);
+    */
+
+    width:auto;
+    padding: 20px;
+    height:200px;
+    position: fixed;
+    background: rgba(252,259,175,0.8);
+    top: 50%;
+    left: 50%;
+    margin-top: -120px;
+    margin-left: -190px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+    display: block;
+    z-index: 100;
+}
+
+#complete{
+    width:500px;
+    padding: 20px;
+    height:auto;
+    position: fixed;
+    background: rgba(252,259,175,0.8);
+    top: 50%;
+    left: 50%;
+    margin-top: -180px;
+    margin-left: -260px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+    font-size: 120px;
+    color: #4A4141;
+    font-family: myFirstFont;
+    display: none;
+}
+
+.reset_anchor{
+	position: relative;
+    display: inline-block;
+    background: #8f7a66;
+    padding: 15px 25px;
+    font-size: 25px;
+    height: 60px;
+    line-height: 47px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+    margin-top: 8px;
+    text-align: center;
+    z-index: 100;
+    width: 125px;
+}
+.reset_anchor::after{
+	content: "New Game";
+	position: absolute;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    color: #eee4da;
+}
+
+/*#game{
+      margin : 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-left: 120px;
+}*/

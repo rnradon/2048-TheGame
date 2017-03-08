@@ -1,0 +1,142 @@
+<html>
+
+<head>
+  <title>2048-TheGame</title>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="jquery-1.9.1.min.js"></script>
+  <link href="base2.css" rel="stylesheet">
+  <script type="text/javascript" src = "Game.js"></script>
+</head>
+
+<body>
+  <header>
+    <!-- <div id="reset">
+      <i class="fa fa-refresh"></i>
+
+    </div>
+    <div id="score">0</div> -->
+
+  </header>
+
+  <main id="game">
+    <div class="container-fluid" style="background-image: url(./res/background_img.jpg); background-repeat: repeat; height: 100%;">
+      <div class="col-md-2 col-sm-0 col-xs-0" >
+      </div>
+      <div class="col-md-8 col-sm-12 col-xs-12" style="background-image: url(./res/white_bg.jpg); background-repeat: repeat; height: 100%;">
+
+
+        <div class="col-md-2 col-sm-0 col-xs-0">
+        </div>
+        <div class="col-md-8 col-sm-12 col-xs-12" style="text-align: center; margin-top: 2%">
+        <div style="display: flex; justify-content: space-between;">
+        <div>
+        <h1><a href="#" style="text-decoration: none; font-weight: bold; color:#776e65; font-size: 74px;line-height: 66px;">2048</a></h1>
+        </div>
+        <div style="margin-top: 2%;">
+          
+          <div id="score">0</div>
+          <div id="high_score">0</div>
+          </div>
+          </div>
+          <div class="game_details" style="display: flex; justify-content: space-between;">
+          <div>
+          <p>Play 2048 Game Online</p>
+          <p>Join the numbers and get to the <b>2048</b> tile!</p>
+          </div>
+          <div id="reset">
+            <a class="reset_anchor" style="text-decoration: none;" href=""></a>
+          </div>
+          </div>
+          <div class="arena" style="display: inline-block;">
+
+            <!-- ROW 1 -->
+            <div class="row rows">
+              <div class="col-md-3 col-sm-3 col-xs-3 tile" id = "0">
+
+              </div>
+              <div class="col-md-3 col-sm-3 col-xs-3 tile" id = "1">
+
+              </div>
+              <div class="col-md-3 col-sm-3 col-xs-3 tile" id = "2">
+
+              </div>
+              <div class="col-md-3 col-sm-3 col-xs-3 tile" id = "3">
+
+              </div>
+            </div>
+
+            <!-- ROW 2 -->
+            <div class="row rows">
+             <div class="col-md-3 col-sm-3 col-xs-3 tile" id = "4"> 
+
+             </div>
+             <div class="col-md-3 col-sm-3 col-xs-3 tile" id = "5">
+
+             </div>
+             <div class="col-md-3 col-sm-3 col-xs-3 tile" id = "6">
+
+             </div>
+             <div class="col-md-3 col-sm-3 col-xs-3 tile" id = "7">
+
+             </div>
+           </div>
+
+           <!-- ROW 3 -->
+           <div class="row rows">
+             <div class="col-md-3 col-sm-3 col-xs-3 tile" id = "8">
+
+             </div>
+             <div class="col-md-3 col-sm-3 col-xs-3 tile" id = "9">
+
+             </div>
+             <div class="col-md-3 col-sm-3 col-xs-3 tile" id = "10">
+
+             </div>
+             <div class="col-md-3 col-sm-3 col-xs-3 tile" id = "11">
+
+             </div>
+           </div>
+
+           <!-- ROW 4 -->
+           <div class="row rows">
+             <div class="col-md-3 col-sm-3 col-xs-3 tile" id = "12">
+
+             </div>
+             <div class="col-md-3 col-sm-3 col-xs-3 tile" id = "13">
+
+             </div>
+             <div class="col-md-3 col-sm-3 col-xs-3 tile" id = "14">
+
+             </div>
+             <div class="col-md-3 col-sm-3 col-xs-3 tile" id = "15">
+
+             </div>
+           </div>
+         </div>
+         <div id = "GameOver">
+            GAME OVER! PRESS RESET TO PLAY AGAIN.
+            </div>
+            <div id = "complete">
+            YOU WON!
+            </div>
+       </div>
+       <div class="col-md-2 col-sm-0 col-xs-0">
+       </div>
+     </div>
+     <div class="col-md-2 col-sm-0 col-xs-0">
+     </div>
+   </div>
+
+ </main>
+
+ <script>
+  function onBodyLoad () {
+    Game.init();
+  }
+  window.addEventListener('load', onBodyLoad);
+</script>
+</body>
+</html>
